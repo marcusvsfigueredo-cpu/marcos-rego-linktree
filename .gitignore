@@ -1,0 +1,9 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Local Claude settings
+.claude/settings.local.json

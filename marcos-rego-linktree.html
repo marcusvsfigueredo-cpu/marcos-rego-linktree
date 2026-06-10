@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Marcos Rêgo · Pré-candidato a Deputado Federal · PV Bahia</title>
+
+<meta name="description" content="Marcos Rêgo, pré-candidato a Deputado Federal pelo PV Bahia. Energia renovável e limpa acessível para todos, com atenção especial à energia solar e às demandas reais da população baiana." />
+<meta name="author" content="Marcos Rêgo" />
+<meta name="theme-color" content="#15643f" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Marcos Rêgo · Deputado Federal · PV Bahia" />
+<meta property="og:description" content="Energia renovável e limpa acessível para todos, com atenção especial à energia solar e às demandas reais da população baiana." />
+<meta property="og:image" content="./assets/marcos-rego.jpg" />
+<meta property="og:locale" content="pt_BR" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Marcos Rêgo · Deputado Federal · PV Bahia" />
+<meta name="twitter:description" content="Energia renovável e limpa acessível para todos, com atenção especial à energia solar." />
+<meta name="twitter:image" content="./assets/marcos-rego.jpg" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2315643f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23f5b301'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --green: #15643f;
+    --green-deep: #0d4c2e;
+    --green-bright: #1f8a56;
+    --yellow: #f5b301;
+    --yellow-soft: #ffd45e;
+
+    --bg: #eef2ec;
+    --bg-grad-a: #e7efe6;
+    --bg-grad-b: #f3f6f1;
+    --surface: #ffffff;
+    --surface-2: #f4f7f3;
+    --text: #15241b;
+    --text-soft: #4a5a50;
+    --text-faint: #788579;
+    --border: #e2e9e1;
+    --shadow: 0 10px 30px -12px rgba(13, 56, 34, 0.22);
+    --shadow-card: 0 6px 22px -10px rgba(13, 56, 34, 0.28);
+    --ring: rgba(245, 179, 1, 0.55);
+  }
+
+  [data-theme="dark"] {
+    --green: #2aa56b;
+    --green-deep: #0e2a1c;
+    --green-bright: #34c281;
+    --yellow: #ffc62e;
+    --yellow-soft: #ffd96b;
+
+    --bg: #0a130d;
+    --bg-grad-a: #0c1810;
+    --bg-grad-b: #08110b;
+    --surface: #122019;
+    --surface-2: #16271d;
+    --text: #eaf3ec;
+    --text-soft: #b3c5ba;
+    --text-faint: #7e9385;
+    --border: #1e3326;
+    --shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.6);
+    --shadow-card: 0 10px 28px -14px rgba(0, 0, 0, 0.55);
+    --ring: rgba(255, 198, 46, 0.6);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background:
+      radial-gradient(120% 70% at 50% -10%, var(--bg-grad-a) 0%, var(--bg) 55%),
+      var(--bg-grad-b);
+    color: var(--text);
+    min-height: 100dvh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  .shell {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100dvh;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 60px -20px rgba(0,0,0,0.18);
+  }
+  [data-theme="dark"] .shell { box-shadow: 0 0 60px -10px rgba(0,0,0,0.5); }
+
+  /* ---------- Theme toggle ---------- */
+  .theme-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 20;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.28);
+    background: rgba(12, 30, 20, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .theme-toggle:hover { transform: scale(1.06); }
+  .theme-toggle:active { transform: scale(0.94); }
+  .theme-toggle svg { width: 22px; height: 22px; }
+  .theme-toggle .icon-sun { display: none; }
+  [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    max-height: 560px;
+    overflow: hidden;
+  }
+  .hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 28%;
+  }
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(8,30,18,0.45) 0%, rgba(8,30,18,0.05) 26%, rgba(8,28,17,0.25) 58%, rgba(7,22,14,0.82) 88%, var(--bg) 100%);
+  }
+  .hero__content {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 0 22px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #fff;
+  }
+  .badge-party {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245, 179, 1, 0.95);
+    color: #14241a;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 999px;
+    white-space: nowrap;
+    box-shadow: 0 6px 16px -6px rgba(0,0,0,0.4);
+  }
+  .badge-party .dot {
+    width: 9px; height: 9px; border-radius: 999px;
+    background: var(--green);
+  }
+  .hero__name {
+    font-size: clamp(30px, 9vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+  }
+  .hero__role {
+    font-size: 15px;
+    font-weight: 600;
+    color: #f2efe6;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  }
+  .hero__role strong { color: var(--yellow-soft); font-weight: 800; }
+  .hero__phrase {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.94);
+    line-height: 1.5;
+    text-wrap: pretty;
+    border-left: 3px solid var(--yellow);
+    padding-left: 12px;
+    margin-top: 2px;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+  }
+
+  /* ---------- Manifesto ---------- */
+  .manifesto {
+    padding: 26px 22px 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .manifesto__lead {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    line-height: 1.35;
+    text-wrap: balance;
+  }
+  .manifesto__lead .hl {
+    background: linear-gradient(180deg, transparent 62%, var(--yellow-soft) 62%);
+    padding: 0 2px;
+  }
+  [data-theme="dark"] .manifesto__lead .hl {
+    background: linear-gradient(180deg, transparent 62%, rgba(255,198,46,0.32) 62%);
+  }
+  .manifesto__body {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-soft);
+    line-height: 1.6;
+    text-wrap: pretty;
+    max-width: 38ch;
+    margin: 0 auto;
+  }
+  .divider {
+    width: 46px; height: 4px; border-radius: 999px;
+    background: linear-gradient(90deg, var(--green), var(--yellow));
+    margin: 4px auto 0;
+  }
+
+  /* ---------- Links ---------- */
+  .links {
+    padding: 22px 18px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 16px 16px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: transform 0.18s cubic-bezier(.2,.7,.3,1), box-shadow 0.18s ease, border-color 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--accent, var(--green));
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px -14px rgba(13, 56, 34, 0.4);
+    border-color: color-mix(in srgb, var(--accent, var(--green)) 45%, var(--border));
+  }
+  [data-theme="dark"] .card:hover { box-shadow: 0 18px 36px -16px rgba(0,0,0,0.7); }
+  .card:active { transform: translateY(-1px) scale(0.992); }
+  .card:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+
+  .card__icon {
+    flex: 0 0 auto;
+    width: 54px; height: 54px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: var(--accent-soft, rgba(21,100,63,0.12));
+    color: var(--accent, var(--green));
+  }
+  .card__icon svg { width: 28px; height: 28px; }
+
+  .card__text { flex: 1 1 auto; min-width: 0; }
+  .card__title, .card__sub, .card__action { display: block; }
+  .card__action { width: fit-content; }
+  .card__title {
+    font-size: 16.5px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    line-height: 1.2;
+  }
+  .card__sub {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-soft);
+    margin-top: 3px;
+    line-height: 1.35;
+  }
+  .card__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 9px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent, var(--green));
+    background: var(--accent-soft, rgba(21,100,63,0.1));
+    padding: 5px 10px;
+    border-radius: 999px;
+  }
+  .card__chev {
+    flex: 0 0 auto;
+    color: var(--text-faint);
+    transition: transform 0.18s ease, color 0.18s ease;
+  }
+  .card:hover .card__chev { transform: translateX(3px); color: var(--accent, var(--green)); }
+  .card__chev svg { width: 22px; height: 22px; display: block; }
+
+  /* accent themes */
+  .card.--whats { --accent: #1faa59; --accent-soft: rgba(31,170,89,0.12); }
+  .card.--manifesto { --accent: var(--green); --accent-soft: rgba(21,100,63,0.12); }
+  .card.--map { --accent: #d98a00; --accent-soft: rgba(217,138,0,0.14); }
+  .card.--ebook { --accent: #c98a00; --accent-soft: rgba(201,138,0,0.14); }
+  [data-theme="dark"] .card.--whats { --accent: #34c281; --accent-soft: rgba(52,194,129,0.16); }
+  [data-theme="dark"] .card.--manifesto { --accent: #2aa56b; --accent-soft: rgba(42,165,107,0.18); }
+  [data-theme="dark"] .card.--map { --accent: #ffc62e; --accent-soft: rgba(255,198,46,0.16); }
+  [data-theme="dark"] .card.--ebook { --accent: #ffce4d; --accent-soft: rgba(255,206,77,0.16); }
+
+  /* ---------- Footer ---------- */
+  .foot {
+    padding: 22px 22px 36px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .foot__mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--text-soft);
+  }
+  .foot__mark .leaf {
+    width: 20px; height: 20px; border-radius: 6px;
+    background: linear-gradient(135deg, var(--green), var(--green-bright));
+    display: grid; place-items: center;
+  }
+  .foot__mark .leaf::after {
+    content: ""; width: 8px; height: 8px; border-radius: 999px; background: var(--yellow);
+  }
+  .foot__note {
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.5;
+    max-width: 34ch;
+    margin: 0 auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+  <main class="shell" aria-label="Página de links de Marcos Rêgo">
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar modo claro e escuro" title="Alternar tema">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+
+    <!-- HERO -->
+    <header class="hero">
+      <img class="hero__img" src="./assets/marcos-rego.jpg" alt="Marcos Rêgo sorrindo, com punho erguido, vestindo camiseta verde com a palavra SOLAR" />
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <span class="badge-party"><span class="dot"></span>PV · Bahia</span>
+        <h1 class="hero__name">Marcos Rêgo</h1>
+        <p class="hero__role">Pré-candidato a <strong>Deputado Federal</strong> · PV Bahia</p>
+        <p class="hero__phrase">Energia renovável e limpa acessível para todos, com atenção especial à energia solar e às demandas reais da população baiana.</p>
+      </div>
+    </header>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto" aria-label="Manifesto da campanha">
+      <p class="manifesto__lead">Uma Bahia mais justa, sustentável e com <span class="hl">energia acessível</span> para quem mais precisa.</p>
+      <p class="manifesto__body">Este espaço reúne os principais canais de contato, materiais de campanha e conteúdos públicos de orientação sobre energia solar e participação popular.</p>
+      <span class="divider" aria-hidden="true"></span>
+    </section>
+
+    <!-- LINKS -->
+    <nav class="links" aria-label="Canais e materiais">
+
+      <a class="card --whats" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.5 9.5 0 0 1-4.84-1.33l-.35-.2-3.6.94.96-3.51-.23-.36a9.46 9.46 0 0 1-1.45-5.05c0-5.24 4.27-9.5 9.52-9.5 2.54 0 4.93.99 6.73 2.79a9.45 9.45 0 0 1 2.78 6.72c0 5.24-4.27 9.5-9.51 9.5zm8.1-17.6A11.36 11.36 0 0 0 12.04 1C5.74 1 .62 6.12.62 12.41c0 2.01.53 3.97 1.53 5.7L.5 23.5l5.53-1.45a11.4 11.4 0 0 0 5.48 1.4h.01c6.3 0 11.42-5.12 11.42-11.41 0-3.05-1.19-5.92-3.35-8.08z"/></svg>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Chama no Zap</span>
+          <span class="card__sub">Fale direto com a equipe</span>
+          <span class="card__action">Falar agora</span>
+        </span>
+        <span class="card__chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      </a>
+
+      <a class="card --manifesto" href="#" rel="noopener">
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h11l-2 4 2 4H5"/><path d="M4 22h6"/></svg>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Manifesto de campanha</span>
+          <span class="card__sub">Conheça as propostas e bandeiras</span>
+          <span class="card__action">Ler manifesto</span>
+        </span>
+        <span class="card__chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      </a>
+
+      <a class="card --map" href="#" rel="noopener">
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Mapa da Reclamação da Coelba</span>
+          <span class="card__sub">Veja as demandas e problemas da população</span>
+          <span class="card__action">Abrir mapa</span>
+        </span>
+        <span class="card__chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      </a>
+
+      <a class="card --ebook" href="#" rel="noopener">
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><circle cx="13" cy="9" r="2.3"/><path d="M13 4.3v.6M13 13.1v.6M8.3 9h.6M17.1 9h.6"/></svg>
+        </span>
+        <span class="card__text">
+          <span class="card__title">Ebook boas práticas Solar</span>
+          <span class="card__sub">Guia prático sobre energia solar acessível</span>
+          <span class="card__action">Baixar guia</span>
+        </span>
+        <span class="card__chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      </a>
+
+    </nav>
+
+    <!-- FOOTER -->
+    <footer class="foot">
+      <span class="foot__mark"><span class="leaf" aria-hidden="true"></span>Marcos Rêgo · PV Bahia</span>
+      <p class="foot__note">Energia solar acessível e participação popular para uma Bahia mais justa e sustentável.</p>
+    </footer>
+
+  </main>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var KEY = 'mr-theme';
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    if (saved === 'light' || saved === 'dark') {
+      root.setAttribute('data-theme', saved);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      root.setAttribute('data-theme', 'dark');
+    }
+    var btn = document.getElementById('themeToggle');
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', next === 'dark' ? '#0a130d' : '#15643f');
+    });
+  })();
+</script>
+</body>
+</html>
